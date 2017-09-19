@@ -1,12 +1,12 @@
-// Plain Old JavaScript
+// Wait for entire page to load before adding event listeners.
 window.onload = function () {
 
-  // Select by id.
+  // Select by the page header by id.
   var pageHeader = document.getElementById("page-header");
-  console.log(pageHeader);
+  console.log(pageHeader); /* debug statement */
   var text = "Hello";
   
-  // Change text on click.
+  // Add click event listener to header.
   pageHeader.addEventListener("click", function() {
     var h1 = this.querySelector("h1");
     var origText = h1.textContent; 
@@ -15,7 +15,7 @@ window.onload = function () {
   });
 
 
-  // Select by tag name
+  // Select paragraphs by tag name
   var paras = document.getElementsByTagName("p");
 
   // Change color on mouse over. What is a better way to do this?
@@ -28,22 +28,24 @@ window.onload = function () {
     }
   }
   
-  // Select using CSS selector
-  var sections = document.querySelectorAll('section');
+  // Select all collabsible sections using CSS selector
+  var sections = document.querySelectorAll('section.collapsible');
 
   // Add click listener to each section
   for (var i = 0; i < sections.length; i++) {
     sections[i].addEventListener("click", function() {
-      console.log(this);
+      console.log(this); /* debug statement */
       toggleCollapsibleSection(this);
     });
   }
 
   function toggleCollapsibleSection(element) {
-    // change icon.
+    // toggle css class to change icon.
     element.classList.toggle("collapsed");
 
+    // find all the children of the element
     var children = element.children;
+    
     // hide content. start loop at one to skip over h3
     for(var j = 1; j < children.length; j++) {
       if(children[j].style.display == 'none') {
