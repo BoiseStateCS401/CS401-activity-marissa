@@ -3,83 +3,55 @@
 <head>
   <meta charset="utf-8" />
   <title>Marissa's First Website</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/site.js"></script>
 </head>
 <body>
-<h1>Marissa's Website</h1>
-<h2>CS401 Fall 2017</h2>
-
-<h2 class="section">HTML, CSS, and JavaScript</h2>
-<h3>HTML</h3>
-<p>HTML is the standard markup language for creating Web pages. HTML stands
-for Hyper Text Markup Language. HTML describes the structure of Web pages
-using markup. HTML elements are the building blocks of HTML pages. HTML
-elements are represented by tags.</p>
-<a href="https://www.w3schools.com/html/" title="w3schools HTML tutorial">https://www.w3schools.com/html/</a>
-
-<h3>CSS</h3>
-<p>CSS is a language that describes the style of an HTML document. CSS 
-describes how HTML elements should be displayed.</p>
-<a href="https://www.w3schools.com/css/" title="w3schools CSS tutorial">https://www.w3schools.com/css/</a>
-
-<h3>JavaScript</h3>
-<p>JavaScript is the programming language of HTML and the Web.</p>
-<a href="https://www.w3schools.com/js/" title="w3schools JavaScript tutorial">https://www.w3schools.com/js/</a>
-
-<h2 class="section">These Are a Few of My Favorite Things</h2>
-<h3>Favorite Animals</h3>
-<ul class="image-grid">
-  <li>
-    <figure>
-    <a href="https://en.wikipedia.org/wiki/Horse">
-    <img src="https://s-media-cache-ak0.pinimg.com/originals/73/08/bc/7308bc952f0f460f6b46fa4f3f97a933.jpg"
-    alt="a magestic white, brown-speckled mare slightly rearing front legs to the right with beautiful sunny skies and green grass" />
-    </a>
-    <figcaption>A <strong>majestic</strong> horse.</figcaption>
-    </figure>
-  </li>
-  <li>
-    <figure>
-      <a href="https://en.wikipedia.org/wiki/Rabbit">
-      <img src="https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg"
-      alt="a tiny grey, lop-eared bunny laying on a cuddly white blanket" />
-      </a>
-      <figcaption>A <em>cute</em> little bunny.</figcaption>
-    </figure>
-  </li>
-</ul>
-
-<h3>My Favorite Program</h3>
-<pre>public class HelloWorld
-{
-  public static void main(String[] args)
-  {
-    System.out.println("Hello World!");
-  }
-}</pre>
-
-<h3>My favorite Foods</h3>
-<table id="fav-food">
-  <caption>Favorite foods by meal</caption>
-  <thead>
-  <tr>
-    <th>Meal</th><th>Food</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr>
-    <td>Breakfast</td><td>French Toast</td>
-  </tr>
-  <tr>
-    <td>Lunch</td><td>Nachos</td>
-  </tr>
-  <tr>
-    <td>Dinner</td><td>Chicken</td>
-  </tr>
-  </tbody>
-</table>
-
-<p id="footer">&copy; Marissa Schmidt 2017</p>
+<header id="page-header">
+  <a href="#"><img id="icon" alt="icon" src="images/home-icon.jpg" /></a>
+  <h1>Marissa's Website</h1>
+  <h2>CS516 Summer 2017</h2>
+</header>
+<nav id="sidenav">
+  <ul>
+    <li class="selected"><a href="index.html">HTML, CSS, and JavaScript</a></li>
+    <li><a href="myfavs.html">These Are a Few of My Favorite Things</a></li>
+  </ul>
+</nav>
+<article id="html-css-js">
+  <header>
+    <h2>HTML, CSS, and JavaScript</h2>
+    <h3>Some cool stuff</h3>
+  </header>
+  <section id="html" class="collapsible">
+    <h3>HTML</h3>
+    <p>HTML is the standard markup language for creating Web pages. HTML stands for Hyper Text Markup Language. 
+      HTML describes the structure of Web pages using markup. HTML elements are the building blocks of HTML pages.
+      HTML elements are represented by tags.</p>
+    <footer> 
+      <a href="https://www.w3schools.com/html/" title="w3schools HTML tutorial">https://www.w3schools.com/html/</a>
+    </footer>
+  </section>
+  <section id="css" class="collapsible">
+    <h3>CSS</h3>
+    <p>CSS is a language that describes the style of an HTML document. CSS describes how HTML elements should be
+      displayed.</p>
+    <footer>
+      <a href="https://www.w3schools.com/css/" title="w3schools CSS tutorial">https://www.w3schools.com/css/</a>
+    </footer>
+  </section>
+  <section id="js" class="collapsible">
+    <h3>JavaScript</h3>
+    <p>JavaScript is the programming language of HTML and the Web.</p>
+    <footer>
+      <a href="https://www.w3schools.com/js/" title="w3schools JavaScript tutorial">https://www.w3schools.com/js/</a>
+    </footer>
+  </section>
+</article>
+<footer id="page-footer">
+  <p>&copy; Marissa Schmidt 2017</p>
+</footer> 
 </body>
 </html>

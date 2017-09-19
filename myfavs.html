@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Marissa's First Website</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" />
+  <link href="images/favicon.ico" rel="icon" type="image/x-icon" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/site.js"></script>
+</head>
+<body>
+<header id="page-header">
+  <a href="#"><img id="icon" alt="icon" src="images/home-icon.jpg" /></a>
+  <h1>Marissa's Website</h1>
+  <h2>CS516 Summer 2017</h2>
+</header>
+<nav id="sidenav">
+  <ul>
+    <li><a href="index.html">HTML, CSS, and JavaScript</a></li>
+    <li class="selected"><a href="myfavs.html">These Are a Few of My Favorite Things</a></li>
+  </ul>
+</nav>
+<article id="favorites">
+  <h2>These Are a Few of My Favorite Things</h2>
+  <section>
+    <h3>Favorite Animals</h3>
+    <ul class="image-grid">
+      <li>
+        <figure>
+          <img src="https://s-media-cache-ak0.pinimg.com/originals/73/08/bc/7308bc952f0f460f6b46fa4f3f97a933.jpg"
+            alt="a magestic white, brown-speckled mare slightly rearing front legs to the right with beautiful
+              sunny skies and green grass" />
+          <figcaption>A <strong>majestic</strong> horse.</figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="https://s-media-cache-ak0.pinimg.com/736x/0a/8b/91/0a8b91f0bfbbcbc65fb7d43cd9ff4c78.jpg"
+            alt="a tiny grey, lop-eared bunny laying on a cuddly white blanket" />
+          <figcaption>A <em>cute</em> little bunny.</figcaption>
+        </figure>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <h3>My Favorite Program</h3>
+    <pre><code id="hello-java">
+public class HelloWorld
+{
+  public static void main(String[] args)
+  {
+    System.out.println("Hello World!");
+  }
+}
+    </code></pre>
+  </section>
+  <section>
+    <h3>My favorite Foods</h3>
+    <table id="fav-food">
+      <caption>Favorite foods by meal</caption>
+      <thead>
+        <tr><th>Meal</th><th>Food</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Breakfast</td><td>French Toast</td></tr>
+        <tr><td>Lunch</td><td>Nachos</td></tr>
+        <tr><td>Dinner</td><td>Chicken</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section>
+    <h3>My favorite place</h3>
+	<div id="map"></div>
+	<!-- Replace the value of the key parameter with your own API key. -->
+	<script async defer
+	  src="https://maps.googleapis.com/maps/api/js?key=REPLACE_WITH_YOUR_API_KEY&callback=initMap">
+	</script>
+  </section>
+</article>
+<footer id="page-footer">
+  <p>&copy; Marissa Schmidt 2017</p>
+</footer> 
+</body>
+</html>

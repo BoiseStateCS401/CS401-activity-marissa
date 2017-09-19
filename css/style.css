@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great|Comfortaa|Montserrat');
+
+/*
+  Light Teal: #ccfff5;
+  Blue Gray: #2d5986;
+  Purple: #9900cc;
+
+  Link Blue: #0099ff;
+  Light Blue: #e6f5ff;
+ */
+
+*, html {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* HTML5 Block Elements */
+article, aside, details, footer, header, hgroup, menu, nav, section {
+  display: block;
+  margin: 8px;
+  padding: 8px;
+}
+
+body {
+  background-color: #ccfff5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comfortaa', cursive;
+}
+
+article > h2 {
+  text-align: center;
+}
+
+section, article {
+  border-radius: 20px;
+  padding: 30px 20px 20px 20px;
+  margin-bottom: 15px;
+}
+
+article {
+  background-color: white;
+  margin-top: 20px;
+  margin-right: 15px;
+}
+
+section {
+  background-color: lightgray;
+}
+
+section.collapsible > h3 {
+  background-position: right top;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url("https://maxcdn.icons8.com/Share/icon/win8/Arrows//collapse_arrow1600.png");
+}
+
+section.collapsed > h3 {
+  background-image: url("https://maxcdn.icons8.com/Share/icon/Arrows//expand_arrow1600.png");  
+}
+
+p, li {
+  color: #2d5986; 
+}
+
+em {
+  color: #9900cc;
+}
+
+a {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+/* Favorite Animal Image Grid */
+.image-grid {
+  padding-left: 0px;
+  list-style-type: none;
+}
+
+.image-grid > li {
+  margin: 20px;
+  display: inline-block;
+}
+
+.image-grid img {
+  border-radius: 15px;
+  height: 200px;
+}
+
+.image-grid img:hover {
+  opacity: 0.5;
+}
+
+pre {
+  background-color: #e6f5ff;
+  border: 2px solid gray;
+  border-radius: 5px;
+  margin: auto;
+  padding: 8px;
+  width: 50%;
+  overflow: auto;
+}
+
+thead {
+  background-color: lightgray;
+  text-shadow: 1px 1px 0 #444; 
+  color: white;
+}
+
+table, tr, td, th {
+  border: 2px solid gray;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+footer {
+  text-align: right;
+}
+
+/* Layout styles */
+#page-header {
+  background-color: white;
+  margin: 0px;
+  padding: 20px;
+}
+#page-header h1, #page-header h2 {
+  margin-left: 60px;
+}
+
+#page-header > h2 {
+  font-size: 1.2em;
+}
+
+#page-header #icon {
+  width: 50px;
+  position: absolute;
+}
+
+#sidenav ul {
+  list-style-type: none;
+}
+
+#sidenav ul > li > a {
+  padding: 10px;
+  margin-bottom: 5px;
+  text-align: right;
+  background-color: white;
+  border: 1px solid lightgray;
+  font-size: .75em;
+  display: block;
+}
+
+/* Specificity wars. Why doesn't this work?? */
+#sidenav .selected a {
+  background-color: lightGrey;
+}
+
+p:hover {
+  color: red;
+}
+
+/* Responsive Layout */
+@media screen and (min-width:600px) {
+  #sidenav {
+    margin-top: 50px;
+    float: left;
+    width: 20%;
+    padding-left: 0px;
+  }
+  body > article {
+    margin-left: 21%;
+  }
+}
+
+@media screen and (max-width:599px) {
+  #sidenav {
+    text-align: right;
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+  }
+  #sidenav li {
+    display: inline-block;
+  }
+}
+
+#page-footer {
+  clear: both;
+}
+
+/* Google Map */
+#map {
+  height: 400px;
+  width: 100%;
+}
